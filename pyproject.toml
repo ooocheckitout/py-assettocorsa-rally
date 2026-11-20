@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools >= 77.0.3", "setuptools-scm >= 8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-assettocorsa-rally"
+dynamic = ["version"]
+description = "Read Assetto Corsa Rally shared memory on Windows."
+readme = "README.md"
+requires-python = ">= 3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Oleh Solomoichenko" }]
+keywords = [
+    "assetto-corsa-rally",
+    "assettocorsa",
+    "assetto-corsa",
+    "assetto",
+    "simracing",
+    "sim-racing",
+    "telemetry",
+    "rally",
+    "shared-memory",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[dependency-groups]
+dev = ["build", "twine", "mypy"]
+
+[tool.setuptools.packages.find]
+include = ["acrally*"]
+
+[tool.setuptools_scm]
+
+[project.urls]
+Homepage = "https://github.com/ooocheckitout/py-assettocorsa-rally"
+Repository = "https://github.com/ooocheckitout/py-assettocorsa-rally.git"
+Issues = "https://github.com/ooocheckitout/py-assettocorsa-rally/issues"
