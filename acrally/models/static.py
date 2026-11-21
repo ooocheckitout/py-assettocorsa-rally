@@ -11,7 +11,7 @@ class StaticPage(LittleEndianStructure):
     car_model: str
     track: str
     player_name: str
-    track_length_m: float
+    track_spline_length: float
 
     _layout_ = "ms"
     _pack_ = 4
@@ -22,7 +22,7 @@ class StaticPage(LittleEndianStructure):
         ("track", (c_wchar * 33)),
         ("player_name", (c_wchar * 33)),
         ("_unused_266", (c_uint8 * 254)),
-        ("track_length_m", c_float),
+        ("track_spline_length", c_float),
         ("_unused_524", (c_uint8 * 296)),
     ]
 

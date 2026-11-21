@@ -16,9 +16,9 @@ from acrally import ACRallySharedMemory
 try:
     with ACRallySharedMemory() as memory:
         static, physics, graphics = memory.read_snapshot()
-        print(static.car_model, static.track, static.track_length_m)
-        print(physics.speed_kmh, physics.rpm, physics.gear, physics.gas, physics.brake)
-        print(graphics.current_time, graphics.distance_traveled_m)
+        print(static.car_model, static.track, static.track_spline_length)
+        print(physics.speed_kmh, physics.rpms, physics.gear, physics.gas, physics.brake)
+        print(graphics.current_time, graphics.distance_traveled)
 except FileNotFoundError:
     print("The Assetto Corsa Rally shared memory is unavailable. Start the game.")
 ```
